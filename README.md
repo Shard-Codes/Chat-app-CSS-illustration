@@ -28,8 +28,8 @@ Picture 1             |  Picture 2
 
 ### Links
 
-- Solution URL: [Frontend mentor solution link](https://your-solution-url.com)
-- Live Site URL: [Live site link](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution link](https://www.frontendmentor.io/solutions/chat-app-css-illustration-made-with-html-and-css-39822i2zjg)
+- Live Site URL: [Live site link](https://css-illustration-page.netlify.app/)
 
 ## My process
 
