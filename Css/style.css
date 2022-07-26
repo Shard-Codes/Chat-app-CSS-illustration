@@ -1,0 +1,363 @@
+/* ========================== Google fonts link - Rubik ========================== */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* ========================== Css variables ========================== */
+:root {
+  /* ========= Colors ========= */
+  /* Primary */
+  --clr-primary-900: hsl(271, 36%, 24%);
+  --clr-primary-800: hsl(276, 55%, 52%);
+  --clr-primary-700: hsl(271, 15%, 43%);
+  --clr-primary-600: hsl(276, 100%, 81%);
+  --clr-primary-500: hsl(206, 6%, 79%);
+  --clr-primary-400: hsl(270, 7%, 64%);
+
+  /* Gradients */
+  --clr-gradient-900: hsl(264, 100%, 61%);
+  --clr-gradient-800: hsl(293, 100%, 63%);
+
+  /* Secondary */
+  --clr-secondary-900: hsl(271, 36%, 24%);
+  --clr-secondary-800: hsl(289, 100%, 72%);
+  --clr-secondary-700: hsl(270, 20%, 96%);
+  --clr-secondary-600: hsl(0, 0%, 100%);
+
+  /* ========= Typography ========= */
+  /* Fonts */
+  --ff-body: 'Rubik', sans-serif;
+
+  /* Font sizes */
+  --fs-500: 2.5rem;
+  --fs-400: 1.75rem;
+  --fs-300: 1.5rem;
+  --fs-250: 1.25rem;
+  --fs-200: 1rem;
+  --fs-100: .813rem;
+
+  /* Font weights */
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+}
+
+/* ========================== Html reset ========================== */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================== Base styles ========================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--clr-secondary-600);
+  position: relative;
+  font-family: var(--ff-body);
+}
+
+body::after {
+  position: fixed;
+  height: 90vh;
+  background-image: linear-gradient(45deg, var(--clr-gradient-900), var(--clr-gradient-800) 100%);
+  width: 500px;
+  left: -5%;
+  top: 0;
+  content: '';
+  border-radius: 0 0 100vmax 100vmax;
+  z-index: -1;
+}
+
+body::before {
+  position: fixed;
+  height: 90vh;
+  background-color: var(--clr-primary-400);
+  width: 500px;
+  right: -10%;
+  bottom: 0;
+  content: '';
+  border-radius: 100vmax 100vmax 0 0;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+/* ========================== Chat app illustration ========================== */
+.main__content {
+  max-width: 968px;
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.app__data {
+  width: 100%;
+}
+
+.app__title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-medium);
+  color: var(--clr-primary-900);
+  margin-bottom: 1.25rem;
+}
+
+.app__description {
+  line-height: 1.6;
+  color: var(--clr-primary-400);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+}
+
+.phone {
+  max-width: 300px;
+  width: 100%;
+  justify-self: center;
+  border-radius: 30px;
+  box-shadow: 15px 12px 25px rgba(0, 0, 0, 0.085);
+  overflow: hidden;
+  border: 10px solid var(--clr-secondary-600);
+}
+
+.phone__box {
+  height: 100%;
+  background-color: var(--clr-secondary-700);
+  position: relative;
+}
+
+.phone__box::after {
+  width: 150px;
+  height: 30px;
+  background: var(--clr-secondary-600);
+  position: absolute;
+  content: '';
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+}
+
+.top__section {
+  width: 100%;
+  background-image: linear-gradient(90deg, var(--clr-gradient-900), var(--clr-gradient-800) 100%);
+  padding: 1.75rem 1rem .75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-secondary-600);
+  box-shadow: 0 20px 20px -1rem rgba(0, 0, 0, 0.085);
+}
+
+.phone__icon {
+  font-size: 1.25rem;
+}
+
+.menu__icon {
+  margin-left: auto;
+}
+
+.phone__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 1rem 0 .5rem;
+}
+
+.phone__name {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-200);
+}
+
+.phone__availability {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-medium);
+  color: var(--clr-primary-600);
+}
+
+.chat__box {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+  margin-top: .5rem;
+}
+
+.chat__text-incoming,
+.chat__text-outgoing {
+  max-width: 190px;
+  padding: .5rem .75rem;
+  font-size: .713rem;
+  line-height: 1.3;
+}
+
+.chat__incoming {
+  margin-left: .5rem;
+  align-self: flex-start;
+}
+
+.chat__outgoing {
+  margin-right: .5rem;
+  align-self: flex-end;
+}
+
+.picture__box {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: .5rem;
+}
+
+.phone__picture {
+  height: 2.75rem;
+  border-radius: 10px;
+}
+
+.chat__text-incoming {
+  background-color: hsla(268, 54%, 93%);
+  border-radius: 10px 10px 10px 3px;
+  color: var(--clr-primary-800);
+}
+
+.chat__text-outgoing {
+  background-color: var(--clr-secondary-600);
+  border-radius: 10px 10px 3px 10px;
+  color: var(--clr-primary-700);
+}
+
+.chat__poll {
+  max-width: 220px;
+  background-image: linear-gradient(90deg, var(--clr-gradient-800), var(--clr-gradient-900));
+  margin-left: .5rem;
+  border-radius: 10px 10px 10px 3px;
+  display: flex;
+  align-items: center;
+  padding: .75rem;
+  color: var(--clr-secondary-600);
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--clr-secondary-800);
+  border-radius: 50%;
+}
+
+.poll__text {
+  font-size: var(--fs-100);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-600);
+  margin-left: .5rem;
+}
+
+.poll__price {
+  margin-left: auto;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-250);
+}
+
+.input__box {
+  padding: 1.25rem .5rem;
+  width: 100%;
+  position: relative;
+}
+
+.input__text {
+  display: block;
+  width: 100%;
+  padding: .75rem 1rem;
+  font: inherit;
+  border-radius: 100vmax;
+  border: none;
+  outline: none;
+  font-size: var(--fs-100);
+  background-color: var(--clr-secondary-600);
+  color: var(--clr-primary-500);
+}
+
+.input__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
+  padding: .25rem;
+  background-color: var(--clr-secondary-900);
+  color: #fff;
+  border-radius: 50%;
+  font-size: var(--fs-300);
+}
+
+/* ========================== Media queries ========================== */
+/* 912px wide */
+@media (max-width: 57em) {
+  body::after {
+    left: -30%;
+    top: -40%;
+  }
+  
+  body::before {
+    right: -30%;
+    bottom: -40%;
+  }
+}
+
+
+/* 704px wide */
+@media (max-width: 44em) {
+  /* ========================== Chat app illustration ========================== */
+  .main__content {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 0;
+  }
+
+  .app__data {
+    text-align: center;
+  }
+
+  /* ========================== Base styles ========================== */
+  body::after {
+    left: -50%;
+    top: -40%;
+  }
+  
+  body::before {
+    right: -50%;
+    bottom: -40%;
+  }
+}
+
+/* 400px wide */
+@media (max-width: 25em) {
+  /* ========================== Base styles ========================== */
+  body::after {
+    left: -90%;
+  }
+  
+  body::before {
+    right: -90%;
+  }
+}
